@@ -42,7 +42,10 @@ export function resolveEntities(
     for (const entry of Object.values(registry)) {
       if (entry.device_id !== deviceId || entry.platform !== HP_PLATFORM) continue;
       const [domain] = entry.entity_id.split(".");
-      if (entry.translation_key === INK_TRANSLATION_KEY && domain === "sensor") {
+      if (
+        domain === "sensor" &&
+        entry.translation_key?.startsWith(INK_TRANSLATION_KEY)
+      ) {
         inks.push(buildInk(hass, entry.entity_id));
         continue;
       }

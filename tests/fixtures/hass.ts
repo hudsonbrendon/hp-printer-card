@@ -90,9 +90,9 @@ export function mockHass(opts: MockHassOpts = {}): MockHass {
 
   const entities: Record<string, EntityRegistryEntry> = {
     [`sensor.${p}_status`]: reg(`sensor.${p}_status`, "status"),
-    [`sensor.${p}_black_ink`]: reg(`sensor.${p}_black_ink`, "consumable_level"),
+    [`sensor.${p}_black_ink`]: reg(`sensor.${p}_black_ink`, "consumable_level_black"),
     [`sensor.${p}_tri_color_ink`]: reg(`sensor.${p}_tri_color_ink`, "consumable_level"),
-    [`sensor.${p}_black_ink_raw_level`]: reg(`sensor.${p}_black_ink_raw_level`, "consumable_raw_level"),
+    [`sensor.${p}_black_ink_raw_level`]: reg(`sensor.${p}_black_ink_raw_level`, "consumable_raw_level_black"),
     [`sensor.${p}_total_pages`]: reg(`sensor.${p}_total_pages`, "total_pages"),
     [`sensor.${p}_scanned_pages`]: reg(`sensor.${p}_scanned_pages`, "scan_pages"),
     [`sensor.${p}_copied_pages`]: reg(`sensor.${p}_copied_pages`, "copy_pages"),

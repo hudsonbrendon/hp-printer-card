@@ -66,7 +66,7 @@ export const ENTITY_SPECS = {
 
 export type EntityKey = keyof typeof ENTITY_SPECS;
 
-/** translation_key of the per-cartridge level sensors (one per colour). */
+/** translation_key prefix of the per-cartridge level sensors (`consumable_level`, `consumable_level_black`...). */
 export const INK_TRANSLATION_KEY = "consumable_level";
 export const INK_SUFFIX_RE = /_(ink|toner)$/;
 
